@@ -1,11 +1,14 @@
-# ICP Image Classification
+# KYC on-chain
 
-This is an ICP smart contract that accepts an image from the user and runs image classification inference.
+IC contract deploy
+canister id backend : https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=gektk-daaaa-aaaap-qkfta-cai
+canister id frontend : https://gdlv6-oyaaa-aaaap-qkftq-cai.icp0.io/
+
+This is an ICP smart contract that accepts an image from the user and runs the argentinian id validation model.
 The smart contract consists of two canisters:
 
-- the backend canister embeds the [the Tract ONNX inference engine](https://github.com/sonos/tract) with [the MobileNet v2-7 model](https://github.com/onnx/models/tree/main/validated/vision/classification/mobilenet).
-  It provides `classify()` and `classify_query()` endpoints for the frontend code to call.
-  The former endpoint is used for replicated execution (running on all nodes) whereas the latter runs only on a single node.
+- the backend canister embeds the [the Tract ONNX inference engine](https://github.com/sonos/tract) with [quantized_dni_img_val_V0 model]
+  It provides `classify()` endpoint for the frontend code to call.
 - the frontend canister contains the Web assets such as HTML, JS, CSS that are served to the browser.
 
 This example uses Wasm SIMD instructions that are available in `dfx` version `0.20.2-beta.0` or newer.
