@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="styles.css" />
+  <title>KYC onChain</title>
+</head>
+<body>
+  <!-- Main page title -->
+  <header>
+    <h1 class="main-title">KYC Models on Chain</h1>
+  </header>
+
+  <!-- Flex container for the main content -->
+  <div class="main-content">
+    <div class="container">
+      <h1>KYC on-chain</h1>
+      <div id="loader" class="loader invisible"></div>
+      <input type="file" id="file" accept="image/*">
+      <img id="image" class="image invisible" />
+      <button id="classify" class="button">check if dni is valid</button>
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

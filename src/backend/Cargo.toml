@@ -1,0 +1,22 @@
+[package]
+edition = "2021"
+name = "backend"
+version = "1.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0"  # For error handling
+bytes = "1.5.0"  # To handle raw byte arrays
+candid = "0.10"  # To interface with Internet Computer canisters
+colorgrad = "0.6"  # Presumably for some color processing, if needed
+ic-cdk = "0.14.0"  # Core library to build Internet Computer canisters
+ic-stable-structures = "0.6"  # For stable memory management on the IC
+ic-wasi-polyfill = "0.4.1"  # To provide WASI polyfill needed for execution in a canister environment
+image = { version = "0.25.1", features = ["png"], default-features = false }  # For image processing (resizing, etc.)
+prost = "0.11.0"  # Used to work with Protocol Buffers, potentially useful for serialization
+prost-types = "0.11.0"  # Additional types for Protocol Buffers
+serde = { version = "1.0", features = ["derive"] }  # For serialization and deserialization of data structures
+tract-onnx = { git = "https://github.com/sonos/tract", rev = "2a2914ac29390cc08963301c9f3d437b52dd321a" }  # For ONNX inference
+tract-core = { git = "https://github.com/sonos/tract", rev = "2a2914ac29390cc08963301c9f3d437b52dd321a" }  # Core functionality of Tract
